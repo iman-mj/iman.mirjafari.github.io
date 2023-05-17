@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My Homepage | Iman Mirjafari</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		section {
+			padding: 50px;
+			text-align: center;
+		}
+		
+		section h2 {
+			font-size: 30px;
+			font-weight: bold;
+			margin: 20px 0;
+		}
+		
+		section p {
+			font-size: 18px;
+			text-align: center;
+			margin-top: 10px;
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: justify;
+		}
+		
+		section#contact p {
+			text-align: center;
+		}
+		
+		header {
+			position: relative;
+			height: 720px;
+			background-image: url(3.jpg);
+			background-size: cover;
+			background-position: center;
+			text-align: center;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		header img {
+			border-radius: 50%;
+			height: 300px;
+			width: 300px;
+			position: relative;
+			top: 0;
+			margin-bottom: 20px;
+		}
+
+		.header-content {
+			text-align: center;
+		}
+
+		header h1 {
+			font-size: 36px;
+			font-weight: bold;
+			margin: 0 0 10px;
+			position: relative;
+			top: -10px;
+
+		}
+
+		header p {
+			font-size: 18px;
+			text-align: center;
+			margin: -10px 0 0;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: justify;
+		}
+		
+		#date {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+		}
+		section {
+			padding: 50px;
+			text-align: center;
+		}
+		.navbar {
+			position: fixed;
+			top: 0;
+			left: 30%;
+			background-color: gray;
+			color: white;
+			padding: 10px;
+			z-index: 9999;
+		}
+		.navbar a {
+			color: white;
+			text-decoration: none;
+			margin: 0 10px;
+			cursor: pointer;
+		}
+		
+		.bullet-list {
+			list-style-type: disc;
+			padding-left: 20px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: justify;
+		}
+
+		.bullet-list li {
+			margin-bottom: 10px;
+		}
+		
+	</style>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			var navbarLinks = document.querySelectorAll('.navbar a');
+			for (var i = 0; i < navbarLinks.length; i++) {
+				navbarLinks[i].addEventListener('click', function(e) {
+					e.preventDefault();
+					var sectionId = this.getAttribute('data-section');
+					scrollToSection(sectionId);
+				});
+			}
+		});
+
+		function scrollToSection(sectionId) {
+			var section = document.getElementById(sectionId);
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+		function updateDate() {
+			var currentDate = new Date();
+			var dateElement = document.getElementById('date');
+			dateElement.textContent = currentDate.toDateString();
+		}
+
+		document.addEventListener('DOMContentLoaded', function(event) {
+		updateDate();
+		});
+	</script>
+</head>
+<body>
+	<div id="date"></div>
+	<div class="navbar">
+		<a data-section="header">Home</a>
+		<a data-section="experiences">Experiences</a>
+		<a data-section="honors">Honors</a>
+		<a data-section="personal">Personal</a>
+		<a href="Resume-V.3.pdf" download>Resume</a>
+		<a data-section="contact">Contact Me</a>
+	</div>
+	<header id="header">
+		<img src="1.jpg" alt="My Image">
+		<div class="header-content">
+		<h1>Iman Mirjafari</h1>
+		<p>I completed my undergraduate studies at Isfahan University of Technology,
+		specializing in statistics, and achieving the esteemed third rank among my 
+		fellow scholars. The realm of numbers and mathematics captivated me from an 
+		early age, fostering a deep passion that flourished throughout my educational
+		journey, particularly during my high school years when I ventured into the realm 
+		of programming and composed my inaugural creation in the elegant language of Pascal.
+		Guided by a profound appreciation for the interconnectedness of statistics, computer
+		science, and mathematics, I made a deliberate choice to pursue this path at the university
+		level. Diligently undertaking a comprehensive array of courses, I embarked upon an intellectual
+		pilgrimage into the ethereal domains of machine learning and artificial intelligence.
+		Driven by an unyielding thirst for knowledge, I consistently ranked among the top students
+		, with a particular ardor for the enigmatic wonders of mathematics. Fuelled by an unwavering
+		commitment to intellectual inquiry, I find solace in the pursuit of research, diligently
+		illuminating unexplored avenues. </p>
+		</div>
+	</header>
+	<section id="experiences">
+		<h2>Experiences</h2>
+		<p>
+			<ul class="bullet-list">
+				<li>In the year 2019, I had the privilege of assuming the esteemed position of a
+				data analyst at Celery Company. Throughout my tenure, I diligently applied my expertise
+				in data analysis to extract meaningful insights, thereby contributing to the organization's growth and success.</li>
+				<li>Subsequently, in 2022, I embarked upon a new chapter in my professional journey,
+				assuming the role of a machine engineer at Farda Fan Pars Company. Within this distinguished
+				capacity, I undertook intricate projects involving points cloud, leveraging my specialized knowledge 
+				and technical proficiency to propel the company's endeavors in this domain.</li>
+				<li>In the year 2023, I had the honor of serving as a teaching assistant in a data 
+				analysis course, where I imparted my expertise in Python programming. Guiding aspiring 
+				learners, I facilitated their comprehension and application of Python within the realm of
+				data analysis, fostering their growth and proficiency in this critical field.</li>
+				<li>Currently, my scholarly pursuits are centered around groundbreaking research 
+				in the realm of stochastic fractional differential equations. Under the sagacious
+				supervision of Dr. Javad Askari, an esteemed authority in the field, I am delving deep
+				into the intricacies of this captivating domain, endeavoring to expand the boundaries of 
+				knowledge and contribute to the advancement of scientific understanding.</li>
+			</ul>
+		</p>
+	</section>
+	<section id="honors">
+		<h2>Honors</h2>
+		<p>
+			<ul class="bullet-list">
+				<li>Ranked third in the field of Statistics at Isfahan University of Technology.</li>
+				<li>Selected member of the first stage of the Statistics Olympiad, a prestigious competition among the top students
+					of universities in Iran.</li>
+				<li>Chosen as a member of the last stage of the Statistics Olympiad, a competition that included the first stage
+					winners of the Olympiad and the top candidates of the master’s degree entrance exam. Achieved a remarkable
+					20th rank.</li>
+			</ul>	
+				
+		</p>
+	</section>
+	<section id="personal">
+		<h2>Personal</h2>
+		<p>During my discretionary hours, I primarily engage in the consumption of cinematic productions and the appreciation
+		of musical compositions, with a particular fondness for the timeless allure of classical melodies. Additionally, I harbor
+		a keen interest in the realm of competitive sports, namely football and water polo, actively endeavoring to witness their
+		riveting encounters. Furthermore, when my intellectual cravings call for sustenance, I seek solace within the realm of literature,
+		immersing myself in the enriching verses of esteemed poets, most notably the captivating works of Rumi. </p>
+	</section>
+	<section id="contact">
+		<h2>Contact Me</h2>
+		<p>Email: <a href="mailto:iman.mirjafari@math.iut.ac.ir">iman.mirjafari@math.iut.ac.ir</a></p>
+		<p>Skype: <a href="skype:mirjafari.iman?chat">mirjafari.iman</a></p>
+	</section>
+</body>
+</
